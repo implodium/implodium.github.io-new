@@ -15,9 +15,5 @@ import { Component, Vue } from 'vue-property-decorator';
         HelloWorld,
     },
 })
-export default class Home extends Vue {
-    created() {
-        window.location.replace('https://implodium.github.io/implodium.github.io-old/')
-    }
-}
+export default class Home extends Vue { }
 </script>
