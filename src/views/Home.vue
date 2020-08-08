@@ -5,14 +5,19 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue';
+import { Component, Vue } from 'vue-property-decorator';
 
-export default {
-  name: 'Home',
-  components: {
-    HelloWorld,
-  },
-};
+@Component({
+    components: {
+        HelloWorld,
+    },
+})
+export default class Home extends Vue {
+    created() {
+        window.location.replace('https://implodium.github.io/implodium.github.io-old/')
+    }
+}
 </script>
