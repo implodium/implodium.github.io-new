@@ -26,5 +26,5 @@ jobs:
       - name: test
         run: npm test
       # build the vue.js
-      - name: build
-        run: npm run build
+      - name: deploy
+        run: npm run deploy
