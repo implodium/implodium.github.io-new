@@ -1,6 +1,6 @@
 <template>
     <div id="navigation-content">
-        <NavigationPoint name="1"/>
+        <NavigationPoint name="discord"/>
         <NavigationPoint name="2"/>
         <NavigationPoint name="3"/>
         <NavigationPoint name="4"/>
