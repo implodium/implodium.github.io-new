@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import NavigationPoint from '@/components/NavigationPoint.vue'
+import NavigationPoint from '@/components/NavigationField.vue'
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component({

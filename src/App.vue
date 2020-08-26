@@ -11,7 +11,7 @@
 <script>
 import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
-import NavigationPoint from '@/components/NavigationPoint.vue';
+import NavigationPoint from '@/components/NavigationField.vue';
 import Navigation from '@/components/Navigation.vue';
 
 @Component({
