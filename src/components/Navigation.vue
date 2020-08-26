@@ -28,7 +28,7 @@ export default class Navigation extends Vue {}
     box-shadow: 0 10px 8px #888888;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
