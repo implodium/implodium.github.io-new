@@ -1,13 +1,21 @@
 <template>
     <main>
-
+        <NavigationPoint/>
+        <NavigationPoint/>
+        <NavigationPoint/>
+        <NavigationPoint/>
     </main>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import NavigationPoint from '@/components/NavigationPoint.vue';
 
-@Component
+@Component({
+    components: {
+        NavigationPoint,
+    },
+})
 export default class Navigation extends Vue {}
 </script>
 
