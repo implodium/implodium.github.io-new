@@ -1,10 +1,10 @@
 <template>
-    <main>
+    <div id="navigation-content">
         <NavigationPoint name="1"/>
         <NavigationPoint name="2"/>
         <NavigationPoint name="3"/>
         <NavigationPoint name="4"/>
-    </main>
+    </div>
 </template>
 
 <script lang="ts">
@@ -19,13 +19,17 @@ import NavigationPoint from '@/components/NavigationPoint.vue';
 export default class Navigation extends Vue {}
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
-main {
+#navigation-content {
     width: 100vw;
     height: 15vh;
     background-color: white;
     box-shadow: 0 10px 8px #888888;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 </style>

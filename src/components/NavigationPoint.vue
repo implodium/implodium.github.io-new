@@ -1,7 +1,7 @@
 <template>
-<main>
+<div id="navigation-point-content">
     {{ this.name }}
-</main>
+</div>
 </template>
 
 <script lang="ts">
@@ -15,6 +15,9 @@ export default class HelloWorld extends Vue {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+
+#navigation-point-content {
+}
 
 </style>

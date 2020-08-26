@@ -1,9 +1,9 @@
 <template>
-    <main>
+    <div id="app">
         <Navigation/>
 
         <router-view/>
-    </main>
+    </div>
 </template>
 
 <style lang="scss">
@@ -22,13 +22,14 @@ export default class App extends Vue {
 </script>
 
 <style lang="scss">
-
-main {
+body {
     width: 100vw;
     height: 100vh;
+    padding: 0;
+    margin: 0;
 }
 
-body {
+#app {
     width: 100vw;
     height: 100vh;
     padding: 0;
