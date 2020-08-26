@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import NavigationPoint from '@/components/NavigationField.vue';
+import NavigationPoint from '@/components/NavigationPoint.vue';
 
 @Component({
     components: {
