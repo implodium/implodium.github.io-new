@@ -15,7 +15,9 @@ export default class Navigation extends Vue {}
 
 main {
     width: 100vw;
-    height: 7.5vh;
+    height: 15vh;
+    background-color: white;
+    box-shadow: 0 10px 8px #888888;
 }
 
 </style>
