@@ -1,9 +1,9 @@
 <template>
     <main>
-        <NavigationPoint/>
-        <NavigationPoint/>
-        <NavigationPoint/>
-        <NavigationPoint/>
+        <NavigationPoint name="1"/>
+        <NavigationPoint name="2"/>
+        <NavigationPoint name="3"/>
+        <NavigationPoint name="4"/>
     </main>
 </template>
 
