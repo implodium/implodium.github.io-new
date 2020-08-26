@@ -1,5 +1,6 @@
 <template>
-    <div :id="`navigation-point-${this.displayId}`" class="navigation-field">
+    <div :id="`navigation-point-${this.displayId}`"
+         class="navigation-field navigation-image">
         <img :src="url" :alt="displayName">
     </div>
 </template>
@@ -28,4 +29,15 @@ export default class NavigationImage extends NavigationField {
 </script>
 
 <style scoped lang="scss">
+
+.navigation-image {
+
+    img {
+        margin-top: 5vw;
+        width: 40%;
+        box-shadow: 0 10px 8px #888888;
+        border-radius: 100%;
+    }
+}
+
 </style>
