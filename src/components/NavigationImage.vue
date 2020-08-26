@@ -1,6 +1,6 @@
 <template>
     <div :id="`navigation-point-${this.displayId}`" class="navigation-point">
-        {{ this.displayName }}
+        <img :src="url" :alt="displayName">
     </div>
 </template>
 
@@ -10,16 +10,19 @@ import { Component, Prop } from 'vue-property-decorator';
 import NavigationField from './NavigationField.vue';
 
 @Component
-export default class NavigationPoint extends NavigationField {
-    @Prop({ required: true, default: () => 'Menu Point' })
-    protected name!: string
+export default class NavigationImage extends NavigationField {
+    @Prop({ required: true })
+    private url!: string
+
+    @Prop({ required: false, default: () => 'Image' })
+    private name!: string
 
     protected get displayName(): string {
         return this.name;
     }
 
     protected get displayId(): string {
-        return this.name.toLowerCase();
+        return 'image';
     }
 }
 </script>
@@ -40,5 +43,4 @@ export default class NavigationPoint extends NavigationField {
     justify-content: center;
     align-items: center;
 }
-
 </style>

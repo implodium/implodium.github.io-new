@@ -2,6 +2,7 @@
     <div id="navigation-content">
         <NavigationPoint name="discord"/>
         <NavigationPoint name="2"/>
+        <NavigationImage name="logo" url="something this"/>
         <NavigationPoint name="3"/>
         <NavigationPoint name="4"/>
     </div>
@@ -10,9 +11,11 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import NavigationPoint from '@/components/NavigationPoint.vue';
+import NavigationImage from '@/components/NavigationImage.vue';
 
 @Component({
     components: {
+        NavigationImage,
         NavigationPoint,
     },
 })
