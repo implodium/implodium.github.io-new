@@ -28,11 +28,4 @@ export default class NavigationImage extends NavigationField {
 </script>
 
 <style scoped lang="scss">
-#navigation-point-content {
-    height: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 </style>

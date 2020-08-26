@@ -2,7 +2,7 @@
     <div id="navigation-content">
         <NavigationPoint name="discord"/>
         <NavigationPoint name="2"/>
-        <NavigationImage name="logo" url="something this"/>
+        <NavigationImage name="logo" url="/images/ImplodiumLogo.png"/>
         <NavigationPoint name="3"/>
         <NavigationPoint name="4"/>
     </div>
