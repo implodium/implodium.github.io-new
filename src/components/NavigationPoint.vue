@@ -1,5 +1,5 @@
 <template>
-    <div :id="`navigation-point-${this.displayId}`" class="navigation-point">
+    <div :id="`navigation-point-${this.displayId}`" class="navigation-field">
         {{ this.displayName }}
     </div>
 </template>
@@ -26,14 +26,6 @@ export default class NavigationPoint extends NavigationField {
 
 <style scoped lang="scss">
 #navigation-point-content {
-    height: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.navigation-point {
     height: 100%;
 
     display: flex;
