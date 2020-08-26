@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <NavigationPoint></NavigationPoint>
+        <Navigation/>
 
         <router-view/>
     </div>
@@ -12,9 +12,10 @@
 import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
 import NavigationPoint from '@/components/NavigationPoint.vue';
+import Navigation from '@/components/Navigation.vue';
 
 @Component({
-    components: { NavigationPoint },
+    components: { Navigation, NavigationPoint },
 })
 export default class App extends Vue {
 }
