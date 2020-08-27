@@ -1,6 +1,6 @@
 <template>
-    <div :id="`navigation-point-${this.displayId}`" class="navigation-field">
-        {{ this.displayName }}
+    <div :id="`navigation-point-${this.displayId}`" class="navigation-field navigation-point">
+        <div> {{ this.displayName }} </div>
     </div>
 </template>
 
@@ -25,12 +25,11 @@ export default class NavigationPoint extends NavigationField {
 </script>
 
 <style scoped lang="scss">
-#navigation-point-content {
-    height: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.navigation-point div {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3vh;
 }
 
 </style>
