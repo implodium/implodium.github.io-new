@@ -9,5 +9,5 @@ rm -rf dist
 touch helloWorld.txt
 
 git add *
-git commit --amend
+git commit -m 'publish the webpage'
 git push
