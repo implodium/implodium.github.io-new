@@ -1,5 +1,7 @@
 <template>
-    <div class="discord-stats-vertical" :style="{width: width, height: height}">
+    <div :id="`discord-stats-vertical-${this.id}`"
+         class="discord-stats-vertical"
+         :style="{width: width, height: height}">
         <div class="offline-display tracking-display">
             <div class="status-circle"></div>
             <div class="tracking-number">00</div>
@@ -21,16 +23,25 @@ import * as firebase from 'firebase';
 
 @Component
 export default class DiscordStatsVertical extends Vue {
+    private static count = 0
+    public static readonly componentName = 'discord-stats-vertical'
+
     @Prop({ required: false, default: () => '70vh' })
     private height!: string
 
     @Prop({ required: false, default: () => '12vw' })
     private width!: string
 
+    public readonly id = DiscordStatsVertical.count
+
+    public get elementId() {
+        return `#${DiscordStatsVertical.componentName}-${this.id}`
+    }
+
     mounted() {
-        const membersOnlineDisplay = document.querySelector('.online-display .tracking-number') as HTMLElement
-        const membersOfflineDisplay = document.querySelector('.offline-display .tracking-number') as HTMLElement
-        const membersDisplay = document.querySelector('.member-display .tracking-number') as HTMLElement
+        const membersOnlineDisplay = document.querySelector(`${this.elementId} .online-display .tracking-number`) as HTMLElement
+        const membersOfflineDisplay = document.querySelector(`${this.elementId} .offline-display .tracking-number`) as HTMLElement
+        const membersDisplay = document.querySelector(`${this.elementId} .member-display .tracking-number`) as HTMLElement
 
         const firebaseConfig = {
             apiKey: 'AIzaSyDBNz9ziXI3J1_S6ZcM8efmLuhj2jvHD9c',
@@ -54,6 +65,10 @@ export default class DiscordStatsVertical extends Vue {
             membersOfflineDisplay.textContent = data.offlineCount;
             membersOnlineDisplay.textContent = data.onlineCount;
         })
+    }
+
+    created() {
+        DiscordStatsVertical.count += 1
     }
 }
 </script>
