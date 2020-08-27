@@ -1,0 +1,59 @@
+<template>
+    <div class="discord-stats-vertical">
+        <div class="offline-display tracking-display">
+            <div class="status-circle"></div>
+            <div class="tracking-number">00</div>
+        </div>
+        <div class="online-display tracking-display">
+            <div class="status-circle"></div>
+            <div class="tracking-number">00</div>
+        </div>
+        <div class="member-display tracking-display">
+            <img src="/images/users-solid.svg" alt="users-icon">
+            <div class="tracking-number">00</div>
+        </div>
+    </div>
+</template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import * as firebase from 'firebase';
+
+@Component
+export default class DiscordStatsVertical extends Vue {
+    mounted() {
+        const membersOnlineDisplay = document.querySelector('.online-display .tracking-number') as HTMLElement
+        const membersOfflineDisplay = document.querySelector('.offline-display .tracking-number') as HTMLElement
+        const membersDisplay = document.querySelector('.member-display .tracking-number') as HTMLElement
+
+        const firebaseConfig = {
+            apiKey: 'AIzaSyDBNz9ziXI3J1_S6ZcM8efmLuhj2jvHD9c',
+            authDomain: 'discord-stat-tracker.firebaseapp.com',
+            databaseURL: 'https://discord-stat-tracker.firebaseio.com',
+            projectId: 'discord-stat-tracker',
+            storageBucket: 'discord-stat-tracker.appspot.com',
+            messagingSenderId: '734118203066',
+            appId: '1:734118203066:web:5e7f44296c2e1338ea7c83',
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+
+        const stats = database.ref('/guilds/388433193638035457');
+
+        stats.on('value', snapshot => {
+            const data = snapshot.val();
+
+            membersDisplay.textContent = data.memberCount;
+            membersOfflineDisplay.textContent = data.offlineCount;
+            membersOnlineDisplay.textContent = data.onlineCount;
+        })
+    }
+}
+</script>
+
+<style scoped lang="scss">
+.discord-stats-vertical {
+
+}
+</style>
