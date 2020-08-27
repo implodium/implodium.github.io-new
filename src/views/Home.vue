@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <discord-stats-vertical/>
+        <content-wallpaper/>
     </div>
 </template>
 
@@ -8,11 +8,13 @@
 import NavigationPoint from '@/components/NavigationField.vue'
 import { Component, Vue } from 'vue-property-decorator';
 import DiscordStatsVertical from '@/components/DiscordStatsVertical.vue';
+import ContentWallpaper from '@/components/ContentWallpaper.vue';
 
 @Component({
     components: {
         NavigationPoint,
         DiscordStatsVertical,
+        ContentWallpaper,
     },
 })
 export default class Home extends Vue {
@@ -27,7 +29,6 @@ export default class Home extends Vue {
     align-items: center;
 
     width: 100%;
-    height: 92vh;
 }
 
 </style>
