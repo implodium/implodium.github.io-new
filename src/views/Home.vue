@@ -1,5 +1,7 @@
 <template>
-    <div> <discord-stats-vertical></discord-stats-vertical> </div>
+    <div class="home">
+
+    </div>
 </template>
 
 <script lang="ts">
@@ -16,3 +18,15 @@ import DiscordStatsVertical from '@/components/DiscordStatsVertical.vue';
 export default class Home extends Vue {
 }
 </script>
+
+<style scoped lang="scss">
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+</style>
