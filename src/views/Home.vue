@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-
+        <discord-stats-vertical/>
     </div>
 </template>
 
@@ -27,6 +27,7 @@ export default class Home extends Vue {
     align-items: center;
 
     width: 100%;
+    height: 92vh;
 }
 
 </style>
