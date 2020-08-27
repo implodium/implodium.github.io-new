@@ -1,8 +1,9 @@
 <template>
     <div id="app">
-        <Navigation/>
+        <header><Navigation/></header>
 
-        <router-view/>
+        <div class="content"><router-view/></div>
+
     </div>
 </template>
 
@@ -34,6 +35,14 @@ body {
     height: 100vh;
     padding: 0;
     margin: 0;
+}
+
+.content {
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
 </style>

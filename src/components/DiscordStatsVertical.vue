@@ -1,5 +1,5 @@
 <template>
-    <div class="discord-stats-vertical">
+    <div class="discord-stats-vertical" :style="{width: width, height: height}">
         <div class="offline-display tracking-display">
             <div class="status-circle"></div>
             <div class="tracking-number">00</div>
@@ -16,11 +16,17 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator';
 import * as firebase from 'firebase';
 
 @Component
 export default class DiscordStatsVertical extends Vue {
+    @Prop({ required: false, default: () => '70vh' })
+    private height!: string
+
+    @Prop({ required: false, default: () => '12vw' })
+    private width!: string
+
     mounted() {
         const membersOnlineDisplay = document.querySelector('.online-display .tracking-number') as HTMLElement
         const membersOfflineDisplay = document.querySelector('.offline-display .tracking-number') as HTMLElement
@@ -53,7 +59,37 @@ export default class DiscordStatsVertical extends Vue {
 </script>
 
 <style scoped lang="scss">
-.discord-stats-vertical {
 
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+.tracking-display {
+    width: 100%;
+    height: 33.3%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img, .status-circle {
+        height: 10vh;
+        width: 10vh;
+    }
+
+    .status-circle {
+        border-radius: 100%;
+    }
+
+    .tracking-number {
+        font-size: 10vh;
+        font-family: 'Oswald', sans-serif;
+    }
+}
+
+.offline-display .status-circle {
+    background-color: red;
+}
+
+.online-display .status-circle {
+    background-color: green;
 }
 </style>
