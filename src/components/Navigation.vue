@@ -3,7 +3,7 @@
         <NavigationPoint name="Software"/>
         <NavigationPoint name="Gaming"/>
         <NavigationImage name="logo" url="/images/ImplodiumLogo.png"/>
-        <NavigationPoint name="About / Contact"/>
+        <NavigationPoint name="About"/>
         <NavigationPoint name="Discord"/>
     </div>
 </template>
