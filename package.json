@@ -6,10 +6,11 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "publish": "npm run build && rm -rf docs; cp -r dist docs && sed -i -e 's/src=\\//src=/g' docs/index.html ; sed -i -e 's/href=\\//href=/g' docs/index.html"
+    "deploy": ". ./deploy.sh"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "firebase": "^7.19.0",
     "serve": "^11.3.2",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
