@@ -10,6 +10,8 @@ import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class NavigationField extends Vue {
+    protected width = '';
+
     mounted() {
         const navigationPoint = document.querySelector(
             `#navigation-point-${this.displayId}`,
@@ -17,7 +19,8 @@ export default class NavigationField extends Vue {
         console.log(navigationPoint)
         const navigation = navigationPoint.parentElement as HTMLElement
 
-        navigationPoint.style.width = `${100 / navigation.children.length}%`
+        this.width = `${100 / navigation.children.length}%`
+        navigationPoint.style.width = this.width
     }
 
     protected get displayName() {
