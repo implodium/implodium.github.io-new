@@ -1,5 +1,7 @@
 <template>
-    <div :id="`${elementId}`" class="content-wallpaper" :style="background"></div>
+    <div :id="`${elementId}`" class="content-wallpaper" :style="background">
+        Implodium
+    </div>
 </template>
 
 <script lang="ts">
@@ -31,6 +33,14 @@ export default class ContentWallpaper extends Vue {
 .content-wallpaper {
     width: 100%;
     height: 70vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20vh;
+    font-family: 'Oswald', sans-serif;
+    color: white;
 }
 
 </style>
