@@ -12,10 +12,8 @@ git init
 git add *
 git commit -m 'update webpage'
 
-echo 'Username: '
-read username
-echo 'Password: '
-read -s password
+read -p "Username: " username
+read -p "Password: " -s password
 
 git remote add origin https://$username:$password@github.com/implodium/implodium.github.io
 git branch gh-page
