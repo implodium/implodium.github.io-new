@@ -1,12 +1,15 @@
 #!/bin/sh
+
+if [ "$1" == '-r' ]; then
+    rm ./git_credentials.sh
+fi
+
 npm run vue-build &&
 rm -rf docs
 cp -r dist docs
 sed -i -e 's/src=\//src=/g' docs/index.html
 sed -i -e 's/href=\//href=/g' docs/index.html
 rm -rf dist
-
-
 
 if [ -e './git_credentials.sh' ]
 then
@@ -15,14 +18,14 @@ else
   read -p "Username: " username
   read -p "Password: " -s password
 
-  echo "
-    #!/bin/sh
-    export username='$username'
-    export password='$password'
-  " > git_credentials.sh
+  if [ "$1" == "-s" ]; then
+    echo "
+      #!/bin/sh
+      export username='$username'
+      export password='$password'
+    " > git_credentials.sh
+  fi
 fi
-
-
 
 cd docs
 pwd
