@@ -44,19 +44,20 @@ export default class DiscordStatsVertical extends Vue {
         const membersDisplay = document.querySelector(`${this.elementId} .member-display .tracking-number`) as HTMLElement
 
         const firebaseConfig = {
-            apiKey: 'AIzaSyDBNz9ziXI3J1_S6ZcM8efmLuhj2jvHD9c',
-            authDomain: 'discord-stat-tracker.firebaseapp.com',
-            databaseURL: 'https://discord-stat-tracker.firebaseio.com',
-            projectId: 'discord-stat-tracker',
-            storageBucket: 'discord-stat-tracker.appspot.com',
-            messagingSenderId: '734118203066',
-            appId: '1:734118203066:web:5e7f44296c2e1338ea7c83',
+            apiKey: 'AIzaSyD8GkPdCsnBD_dzJrL-XlqxuKVAzNFGSDg',
+            authDomain: 'discord-stat-tracker-17e5f.firebaseapp.com',
+            databaseURL: 'https://discord-stat-tracker-17e5f.firebaseio.com',
+            projectId: 'discord-stat-tracker-17e5f',
+            storageBucket: 'discord-stat-tracker-17e5f.appspot.com',
+            messagingSenderId: '274361264973',
+            appId: '1:274361264973:web:1e725c6ed2f907729ca504',
+            measurementId: 'G-42FDH571V3',
         };
 
         firebase.initializeApp(firebaseConfig);
         const database = firebase.database();
 
-        const stats = database.ref('/guilds/388433193638035457');
+        const stats = database.ref('/guilds/593065252078485514');
 
         stats.on('value', snapshot => {
             const data = snapshot.val();
