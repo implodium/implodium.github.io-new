@@ -57,7 +57,7 @@ export default class DiscordStatsVertical extends Vue {
         firebase.initializeApp(firebaseConfig);
         const database = firebase.database();
 
-        const stats = database.ref('/guilds/593065252078485514');
+        const stats = database.ref('/guilds/388433193638035457');
 
         stats.on('value', snapshot => {
             const data = snapshot.val();
