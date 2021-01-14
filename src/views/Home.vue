@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <discord-stats-vertical/>
+        <FlyingPigCounter> </FlyingPigCounter>
     </div>
 </template>
 
@@ -8,11 +8,13 @@
 import NavigationPoint from '@/components/NavigationField.vue'
 import { Component, Vue } from 'vue-property-decorator';
 import DiscordStatsVertical from '@/components/DiscordStatsVertical.vue';
+import FlyingPigCounter from '@/components/FlyingPigCounter.vue';
 
 @Component({
     components: {
         NavigationPoint,
         DiscordStatsVertical,
+        FlyingPigCounter,
     },
 })
 export default class Home extends Vue {
