@@ -27,7 +27,7 @@ export default class FlyingPigCounter extends Vue {
     mounted() {
         setInterval(() => {
             const counterBox = document.querySelector('#counter-content');
-            const beginningDate = new Date(2021, 1, 29, 15, 0, 0, 0)
+            const beginningDate = new Date(2021, 1, 21, 18, 0, 0, 0)
             const currentTimeWrong = new Date();
             const currentTime = new Date(currentTimeWrong.valueOf());
             const timediff = beginningDate - currentTime;
