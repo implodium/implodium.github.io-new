@@ -6,7 +6,7 @@
             </div>
             <div id="counter">
                 <div id="counter-content">
-                    Project is running
+                    loading ...
                 </div>
                 <div id="counter-breakline"></div>
                 <div id="githubrepolink-container">
@@ -35,8 +35,8 @@ export default class FlyingPigCounter extends Vue {
 
             console.log(timediff)
 
-            if (timediff <= 0) {
-                counterBox.textContent = 'Das Projekt hat begonnen'
+            if (timediff <= 2678400858) {
+                counterBox.textContent = 'Project is running'
             } else {
                 counterBox.textContent = `${timediffObject.getDate() - 1}d
                             ${timediffObject.getHours()}h
